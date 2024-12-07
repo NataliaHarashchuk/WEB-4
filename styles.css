@@ -1,0 +1,195 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #2c343d;
+	background-color: #f4f4f9;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	background: #fff;
+	padding: 18px 24px;
+	align-items: center;
+	text-align: center;
+}
+
+h1,
+p {
+	margin: 0;
+}
+
+.mb-24 {
+	margin-bottom: 24px;
+}
+
+.hamburgerContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 20px;
+}
+
+.hamburgerContainer:hover {
+	cursor: pointer;
+}
+
+.hamburgerItem {
+	background-color: #111111;
+	height: 2px;
+	width: 20px;
+	transition: transform 0.3s;
+}
+
+.hamburgerContainer:hover .hamburgerItem.top {
+	transform: scaleX(1.5) translateY(-4px);
+}
+
+.hamburgerContainer:hover .hamburgerItem.bottom {
+	transform: scaleX(1.5) translateY(4px);
+}
+
+.main {
+	background-color: #edf4fd;
+}
+
+.container {
+	max-width: 100%;
+	padding: 0 48px;
+}
+
+.titleContainer {
+	padding-top: 52px;
+	padding-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.title {
+	color: #5595e8;
+	padding-bottom: 24px;
+	font-size: 27px;
+	font-weight: bold;
+}
+
+.titleText {
+	font-size: 16px;
+	line-height: 1.4;
+	max-width: 595px;
+}
+
+.center {
+	text-align: center;
+}
+
+.cardContainer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.cardSection {
+	padding-bottom: 95px;
+
+	display: grid;
+	gap: 33px;
+	grid-template-columns: 1fr;
+
+	justify-items: center;
+
+	max-width: 915px;
+}
+
+.card {
+	position: relative;
+	max-width: 280px;
+	border-radius: 5px;
+	background-color: #fff;
+	padding: 42px 24px 24px;
+	z-index: 2;
+	text-align: center;
+}
+
+.cardImg {
+	border-bottom: 2px solid #aaacb8;
+	margin-bottom: 20px;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.cardTitle {
+	color: #5595e8;
+	font-weight: bold;
+	font-size: 28px;
+}
+
+.cardText {
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.cardCta {
+	background-color: #fa9746;
+	color: #fff;
+	padding: 11px 24px;
+	border: 0;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12px;
+	letter-spacing: 2px;
+	transition: background-color 0.3s;
+}
+
+.cardCta:hover {
+	cursor: pointer;
+	background-color: #cc6600;
+}
+
+.orangeLine {
+	position: absolute;
+	background-color: #fa9746;
+	width: 100%;
+	height: 175px;
+	top: 134px;
+	left: 0px;
+	z-index: 1;
+}
+
+.footer {
+	background: #333333;
+	color: #fff;
+	padding: 42px 51px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.footerText {
+	max-width: 318px;
+	font-size: 12px;
+	line-height: 1.4;
+}
+
+@media (min-width: 1024px) {
+	.title {
+		font-size: 45px;
+	}
+
+	.cardTitle {
+		font-size: 24px;
+	}
+
+	.cardImg {
+		margin-bottom: 40px;
+	}
+
+	.cardSection {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 36px;
+	}
+}
